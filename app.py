@@ -11,7 +11,7 @@ import altair as alt
 import pickle
 
 with open("text_emotion.pkl", "wb") as pipeline_file:
-    pickle.dump(pipe_lr, pipeline_file)
+    pickle.dump(pipeline_file)
 
 
 emotions_emoji_dict = {"anger": "😠", "disgust": "🤮", "fear": "😨😱", "happy": "🤗", "joy": "😂", "neutral": "😐", "sad": "😔",
