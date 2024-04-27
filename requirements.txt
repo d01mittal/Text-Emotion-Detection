@@ -3,6 +3,6 @@ numpy
 seaborn
 neattext
 sklearn
-joblib
+pickle
 streamlit
 altair
