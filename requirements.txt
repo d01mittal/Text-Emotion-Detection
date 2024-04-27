@@ -3,6 +3,3 @@ numpy
 seaborn
 neattext
 scikit-learn
-pickle
-streamlit
-altair
