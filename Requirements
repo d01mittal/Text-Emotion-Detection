@@ -1,0 +1,5 @@
+You required:-
+pandas, numpy, seaborn, neattext, sklearn and joblib.
+
+For deploying:-
+streamlit, altair.
