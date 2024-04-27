@@ -10,8 +10,16 @@ import altair as alt
 
 import pickle
 
-with open("text_emotion.pkl", "rb") as pipeline_file:
-    pipe_lr = pickle.load(pipeline_file)
+try:
+    with open("text_emotion.pkl", "rb") as pipeline_file:
+        pipe_lr = pickle.load(pipeline_file)
+    print("Model loaded successfully.")
+except FileNotFoundError:
+    print("Error: File 'text_emotion.pkl' not found.")
+except EOFError:
+    print("Error: Unexpected end of file while loading pickled object.")
+except Exception as e:
+    print(f"Error loading model: {e}")
 
 
 emotions_emoji_dict = {"anger": "😠", "disgust": "🤮", "fear": "😨😱", "happy": "🤗", "joy": "😂", "neutral": "😐", "sad": "😔",
