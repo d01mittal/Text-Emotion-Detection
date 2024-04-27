@@ -4,9 +4,15 @@ import pandas as pd
 import numpy as np
 import altair as alt
 
-import joblib
+# import joblib
 
-pipe_lr = joblib.load(open("text_emotion.pkl", "rb"))
+# pipe_lr = joblib.load(open("text_emotion.pkl", "rb"))
+
+import pickle
+
+with open("text_emotion.pkl", "wb") as pipeline_file:
+    pickle.dump(pipe_lr, pipeline_file)
+
 
 emotions_emoji_dict = {"anger": "😠", "disgust": "🤮", "fear": "😨😱", "happy": "🤗", "joy": "😂", "neutral": "😐", "sad": "😔",
                        "sadness": "😔", "shame": "😳", "surprise": "😮"}
