@@ -4,10 +4,6 @@ import pandas as pd
 import numpy as np
 import altair as alt
 
-# import joblib
-
-# pipe_lr = joblib.load(open("text_emotion.pkl", "rb"))
-
 import pickle
 
 try:
