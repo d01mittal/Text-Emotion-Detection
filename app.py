@@ -4,19 +4,10 @@ import pandas as pd
 import numpy as np
 import altair as alt
 
-import pickle
+import joblib
 
-try:
-    with open("text_emotion.pkl", "rb") as pipeline_file:
-        pipe_lr = pickle.load(pipeline_file)
-    print("Model loaded successfully.")
-except FileNotFoundError:
-    print("Error: File 'text_emotion.pkl' not found.")
-except EOFError:
-    print("Error: Unexpected end of file while loading pickled object.")
-except Exception as e:
-    print(f"Error loading model: {e}")
-
+with open("text_emotion.pkl", "rb") as pipeline_file:
+    pipe_lr = joblib.load(pipeline_file)
 
 emotions_emoji_dict = {"anger": "😠", "disgust": "🤮", "fear": "😨😱", "happy": "🤗", "joy": "😂", "neutral": "😐", "sad": "😔",
                        "sadness": "😔", "shame": "😳", "surprise": "😮"}
